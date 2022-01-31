@@ -31,7 +31,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/cubocore/libcprime.git
-        tag: v4.2.0
+        tag: v4.3.0
   - name: libcsys
     buildsystem: cmake-ninja
     config-opts:
@@ -40,7 +40,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/cubocore/libcsys.git
-        tag: v4.2.0
+        tag: v4.3.0
   - name: coreaction
     post-install:
       - install -Dp -m 644 org.cubocore.CoreAction.appdata.xml /app/share/appdata/org.cubocore.CoreAction.appdata.xml
@@ -54,4 +54,4 @@ modules:
         path: org.cubocore.CoreAction.appdata.xml
       - type: git
         url: https://gitlab.com/cubocore/coreapps/coreaction.git
-        tag: v4.2.0
+        tag: v4.3.0
