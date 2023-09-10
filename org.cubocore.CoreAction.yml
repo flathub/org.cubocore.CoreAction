@@ -10,7 +10,7 @@ finish-args:
   - --socket=wayland
   - --device=dri
   - --filesystem=host:ro # Get plugins from host system if found
-  - --filesystem=xdg-config
+  - --filesystem=xdg-config:create # flatpak linter causes error on xdg-config
   - --system-talk-name=org.freedesktop.UPower # For battery plugin showing battery info
   - --talk-name=org.kde.StatusNotifierWatcher # For showing in the system tray
   - --talk-name=org.freedesktop.Notifications 
