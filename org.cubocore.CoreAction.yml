@@ -9,8 +9,8 @@ finish-args:
   - --socket=fallback-x11
   - --socket=wayland
   - --device=dri
-  - --filesystem=host:ro
-  - --filesystem=xdg-config:create
+  - --filesystem=host:ro # Get plugins from host system if found
+  - --filesystem=xdg-config
   - --system-talk-name=org.freedesktop.UPower # For battery plugin showing battery info
   - --talk-name=org.kde.StatusNotifierWatcher # For showing in the system tray
   - --talk-name=org.freedesktop.Notifications 
@@ -27,18 +27,12 @@ cleanup:
 modules:
   - name: libcprime
     buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_INSTALL_PREFIX=/app
-      - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: git
         url: https://gitlab.com/cubocore/libcprime.git
         tag: v4.5.0
   - name: libcsys
     buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_INSTALL_PREFIX=/app
-      - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: git
         url: https://gitlab.com/cubocore/libcsys.git
@@ -47,10 +41,6 @@ modules:
     post-install:
       - install -Dp -m 644 org.cubocore.CoreAction.appdata.xml /app/share/appdata/org.cubocore.CoreAction.appdata.xml
     buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_INSTALL_PREFIX=/app
-      - -DCMAKE_BUILD_TYPE=Release
-      - -DCMAKE_LIBRARY_PATH=/app/lib
     sources:
       - type: file
         path: org.cubocore.CoreAction.appdata.xml
