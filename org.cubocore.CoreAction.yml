@@ -13,8 +13,7 @@ finish-args:
   - --filesystem=xdg-config:create # flatpak linter causes error on xdg-config
   - --system-talk-name=org.freedesktop.UPower # For battery plugin showing battery info
   - --talk-name=org.kde.StatusNotifierWatcher # For showing in the system tray
-  - --talk-name=org.freedesktop.Notifications 
-  - --own-name=org.kde.* # For showing in the system tray
+  - --talk-name=org.freedesktop.Notifications
 cleanup:
   - /include
   - /lib/cmake
