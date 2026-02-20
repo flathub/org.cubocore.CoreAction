@@ -1,0 +1,38 @@
+--- a/app/cc.cubocore.CoreAction.desktop
++++ b/app/cc.cubocore.CoreAction.desktop
+@@ -5,3 +5,3 @@
+ Exec=coreaction
+-Icon=cc.cubocore.CoreAction
++Icon=org.cubocore.CoreAction
+ Type=Application
+--- a/app/main.cpp
++++ b/app/main.cpp
+@@ -31,3 +31,3 @@
+ 
+-const QString appID = APP_ID;
++const QString appID = QStringLiteral("org.cubocore.CoreAction");
+ 
+--- a/app/cc.cubocore.CoreAction.metainfo.xml
++++ b/app/cc.cubocore.CoreAction.metainfo.xml
+@@ -4,3 +4,3 @@
+ <component type="desktop-application">
+-    <id>cc.cubocore.CoreAction</id>
++    <id>org.cubocore.CoreAction</id>
+ 
+@@ -12,3 +12,3 @@
+ 
+-    <launchable type="desktop-id">cc.cubocore.CoreAction.desktop</launchable>
++    <launchable type="desktop-id">org.cubocore.CoreAction.desktop</launchable>
+ 
+--- a/app/CMakeLists.txt
++++ b/app/CMakeLists.txt
+@@ -12,1 +12,1 @@
+-set( APP_ID "cc.cubocore.CoreAction" )
++set( APP_ID "org.cubocore.CoreAction" )
+@@ -57,3 +57,3 @@
+-install( FILES ${APP_ID}.desktop DESTINATION share/applications )
+-install( FILES ${APP_ID}.svg DESTINATION share/icons/hicolor/scalable/apps/ )
+-install( FILES ${APP_ID}.metainfo.xml DESTINATION share/metainfo/ )
++install( FILES cc.cubocore.CoreAction.desktop DESTINATION share/applications )
++install( FILES cc.cubocore.CoreAction.svg DESTINATION share/icons/hicolor/scalable/apps/ )
++install( FILES cc.cubocore.CoreAction.metainfo.xml DESTINATION share/metainfo/ )
