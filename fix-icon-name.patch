@@ -12,8 +12,8 @@
 -const QString appID = APP_ID;
 +const QString appID = QStringLiteral("org.cubocore.CoreAction");
  
---- a/app/cc.cubocore.CoreAction.xml
-+++ b/app/cc.cubocore.CoreAction.xml
+--- a/app/cc.cubocore.CoreAction.metainfo.xml
++++ b/app/cc.cubocore.CoreAction.metainfo.xml
 @@ -4,3 +4,3 @@
  <component type="desktop-application">
 -    <id>cc.cubocore.CoreAction</id>
@@ -35,4 +35,4 @@
 -install( FILES ${APP_ID}.metainfo.xml DESTINATION share/metainfo/ )
 +install( FILES cc.cubocore.CoreAction.desktop DESTINATION share/applications )
 +install( FILES cc.cubocore.CoreAction.svg DESTINATION share/icons/hicolor/scalable/apps/ )
-+install( FILES cc.cubocore.CoreAction.xml DESTINATION share/metainfo/ )
++install( FILES cc.cubocore.CoreAction.metainfo.xml DESTINATION share/metainfo/ )
