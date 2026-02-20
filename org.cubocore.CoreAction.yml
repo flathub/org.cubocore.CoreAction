@@ -49,7 +49,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/cubocore/coreapps/coreaction.git
-        commit: cedb755f3337e80d9d94e17148c6dba41d73ae53
+        commit: a451c2eab010cdc39e7358ca38c78e16e34100ea
         tag: v5.0.1
       - type: patch
         path: fix-icon-name.patch
